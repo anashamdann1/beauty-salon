@@ -99,7 +99,7 @@ Best regards,
 ${fname} ${lname}`
    );
 
-   const salonEmail = 'hello@narrobeauty.at';
+   const salonEmail = 'narrobeauty0@gmail.com';
    window.location.href = `mailto:${salonEmail}?subject=${subject}&body=${body}`;
 
    setTimeout(() => {
