@@ -1,0 +1,615 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Narro Beauty — Permanent Makeup Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+ 
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#ar-section" onclick="closeMobile()">Try On</a>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#booking" onclick="closeMobile()">Book Now</a>
+</div>
+ 
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">NARRO <span>✦</span> BEAUTY</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#ar-section">Virtual Try-On</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#booking" class="nav-book">Book Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+ 
+<!-- ═══════════════════════════════════════════════ -->
+<!-- MAIN SITE WRAPPER -->gigt
+<div id="main-site">
+ 
+  <!-- HERO -->
+  <section id="home" style="padding:0;">
+    <div class="hero-left">
+      <div class="hero-tag">Vienna's Premier Studio</div>
+      <h1 class="hero-title">
+        The Art of<br><em>Permanent</em><br>Beauty
+      </h1>
+      <p class="hero-desc">
+        Narro Beauty offers expert permanent makeup — a cosmetic tattoo technique that enhances your natural features with lasting, smudge-proof precision. Wake up flawless, every day.
+      </p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-primary">Book Appointment</a>
+        <a href="#services" class="btn-outline">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=900&q=85" alt="Permanent Makeup"/>
+      <div class="hero-stat">
+        <div class="hero-stat-num">500+</div>
+        <div class="hero-stat-label">Happy Clients</div>
+      </div>
+      <div class="hero-ornament"></div>
+    </div>
+  </section>
+ 
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>Permanent Makeup</span><span class="dot">✦</span>
+      <span>Microblading</span><span class="dot">✦</span>
+      <span>Lip Blush</span><span class="dot">✦</span>
+      <span>Eyeliner Tattoo</span><span class="dot">✦</span>
+      <span>Ombre Brows</span><span class="dot">✦</span>
+      <span>Narro Beauty Vienna</span><span class="dot">✦</span>
+      <span>Permanent Makeup</span><span class="dot">✦</span>
+      <span>Microblading</span><span class="dot">✦</span>
+      <span>Lip Blush</span><span class="dot">✦</span>
+      <span>Eyeliner Tattoo</span><span class="dot">✦</span>
+      <span>Ombre Brows</span><span class="dot">✦</span>
+      <span>Narro Beauty Vienna</span><span class="dot">✦</span>
+    </div>
+  </div>
+ 
+  <!-- SERVICES GRID -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div class="section-tag">Our Expertise</div>
+      <h2 class="section-title">Permanent Makeup <em>Services</em></h2>
+      <p class="section-sub">Each service is tailored to your unique features. Click any service to learn more and discover what's possible.</p>
+    </div>
+    <div class="services-grid">
+      <a class="service-card reveal" onclick="showService('microblading')" href="javascript:void(0)">
+        <span class="service-icon">🖊️</span>
+        <div class="service-name">Microblading</div>
+        <p class="service-desc">Hair-stroke eyebrow technique using a micro-blade to deposit pigment, creating natural, feather-light brows that look like real hair.</p>
+        <div class="service-price">From €180</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a class="service-card reveal" onclick="showService('ombre')" href="javascript:void(0)">
+        <span class="service-icon">🌅</span>
+        <div class="service-name">Ombré Brows</div>
+        <p class="service-desc">A soft, powdery gradient effect that transitions from light at the front to darker at the tail — perfect for a polished, makeup look.</p>
+        <div class="service-price">From €200</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a class="service-card reveal" onclick="showService('lip')" href="javascript:void(0)">
+        <span class="service-icon">💋</span>
+        <div class="service-name">Lip Blush</div>
+        <p class="service-desc">Adds color, definition, and a natural flush to your lips. Enhances shape and creates the appearance of fuller, more pigmented lips.</p>
+        <div class="service-price">From €220</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a class="service-card reveal" onclick="showService('eyeliner')" href="javascript:void(0)">
+        <span class="service-icon">👁️</span>
+        <div class="service-name">Permanent Eyeliner</div>
+        <p class="service-desc">Define and intensify your eyes with smudge-proof liner. Choose from natural lash-line enhancement to full, bold lines.</p>
+        <div class="service-price">From €160</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a class="service-card reveal" onclick="showService('combo')" href="javascript:void(0)">
+        <span class="service-icon">✨</span>
+        <div class="service-name">Combination Brows</div>
+        <p class="service-desc">The best of both worlds — microblading strokes at the front with powder shading through the tail for dimension and longevity.</p>
+        <div class="service-price">From €240</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a class="service-card reveal" onclick="showService('touchup')" href="javascript:void(0)">
+        <span class="service-icon">🔄</span>
+        <div class="service-name">Touch-Up Sessions</div>
+        <p class="service-desc">Refresh and maintain your permanent makeup after healing. Recommended at 4–8 weeks and annually to keep color vibrant.</p>
+        <div class="service-price">From €80</div>
+        <span class="service-arrow">→</span>
+      </a>
+    </div>
+  </section>
+ 
+  <!-- GALLERY -->
+  <section id="gallery" style="background:white;">
+    <div class="gallery-header reveal">
+      <div class="section-tag">Our Work</div>
+      <h2 class="section-title">Before & <em>After</em></h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gal-item">
+        <div class="gal-bg" style="background-image:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80');"></div>
+        <div class="gal-overlay"><span class="gal-label">Ombré Brows</span></div>
+      </div>
+      <div class="gal-item">
+        <div class="gal-bg" style="background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80');"></div>
+        <div class="gal-overlay"><span class="gal-label">Lip Blush</span></div>
+      </div>
+      <div class="gal-item">
+        <div class="gal-bg" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80');"></div>
+        <div class="gal-overlay"><span class="gal-label">Studio</span></div>
+      </div>
+      <div class="gal-item">
+        <div class="gal-bg" style="background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80');"></div>
+        <div class="gal-overlay"><span class="gal-label">Eyeliner</span></div>
+      </div>
+      <div class="gal-item">
+        <div class="gal-bg" style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&q=80');"></div>
+        <div class="gal-overlay"><span class="gal-label">Microblading</span></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- AR VIRTUAL TRY-ON -->
+  <section id="ar-section" style="padding:0;">
+    <div class="ar-left reveal">
+      <div class="section-tag">Innovative Technology</div>
+      <h2 class="section-title">Virtual <em>Try-On</em><br>Experience</h2>
+      <p class="section-sub">See your new look before committing. Use your camera to preview different brow shapes, lip colors, and eyeliner styles directly on your face in real time.</p>
+      <ul class="ar-features">
+        <li>Real-time face detection and overlay</li>
+        <li>Choose from multiple styles per treatment</li>
+        <li>Capture and share your preview look</li>
+        <li>No commitment — just explore!</li>
+      </ul>
+      <div style="margin-top:2.5rem;">
+        <a href="#booking" class="btn-primary" style="margin-top:1rem;">Book After Trying</a>
+      </div>
+    </div>
+    <div class="ar-right">
+      <div id="ar-video-container">
+        <video id="ar-video" autoplay muted playsinline></video>
+        <canvas id="ar-canvas"></canvas>
+        <div class="ar-overlay-label" id="ar-label">Select a look & start camera</div>
+      </div>
+      <div class="ar-controls">
+        <button class="ar-btn active" id="btn-start" onclick="startCamera()">📷 Start Camera</button>
+        <button class="ar-btn" onclick="setARMode('brows')" id="ar-brows">Brows</button>
+        <button class="ar-btn" onclick="setARMode('lips')" id="ar-lips">Lips</button>
+        <button class="ar-btn" onclick="setARMode('eyeliner')" id="ar-eyeliner">Eyeliner</button>
+        <button class="ar-btn" onclick="captureAR()" id="ar-capture">📸 Capture</button>
+        <button class="ar-btn" onclick="stopCamera()" style="border-color:rgba(255,100,100,0.4);color:#f99;">✕ Stop</button>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ABOUT -->
+  <section id="about" style="padding:0;">
+    <div class="about-img">
+      <div class="about-img-bg"></div>
+      <div class="about-img-overlay"></div>
+    </div>
+    <div class="about-content reveal">
+      <div class="section-tag">Our Story</div>
+      <h2 class="section-title">Where Beauty<br>Meets <em>Artistry</em></h2>
+      <p>Narro Beauty was founded with a single belief: every person deserves to wake up feeling confident and beautiful — without the daily effort. Our studio in Vienna combines advanced permanent makeup techniques with a deep passion for enhancing natural features.</p>
+      <p>Our certified artists bring years of training, precision, and care to every appointment. We use only premium, skin-safe pigments and maintain the highest standards of hygiene and safety.</p>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-num">7+</div>
+          <div class="about-stat-label">Years Experience</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">500+</div>
+          <div class="about-stat-label">Happy Clients</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">6</div>
+          <div class="about-stat-label">Treatments Offered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="test-header reveal">
+      <div class="section-tag">Client Love</div>
+      <h2 class="section-title">What Our Clients <em>Say</em></h2>
+    </div>
+    <div class="test-grid reveal">
+      <div class="test-card">
+        <div class="test-decor">"</div>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-quote">I've never felt so confident. My ombré brows look completely natural and I wake up every morning feeling put-together. The team at Narro Beauty was so professional.</p>
+        <div class="test-author">— Anna K., Vienna</div>
+      </div>
+      <div class="test-card">
+        <div class="test-decor">"</div>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-quote">The lip blush treatment changed my life. My lips look fuller and more defined without any lipstick. Absolutely stunning results and a very relaxing experience.</p>
+        <div class="test-author">— Maria S., Vienna</div>
+      </div>
+      <div class="test-card">
+        <div class="test-decor">"</div>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-quote">My permanent eyeliner is perfect — it makes my eyes look so much more open. The virtual try-on helped me choose the right style before my appointment. Highly recommend!</p>
+        <div class="test-author">— Sophie L., Wien</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- BOOKING -->
+  <section id="booking">
+    <div class="booking-wrap">
+      <div class="booking-info reveal">
+        <div class="section-tag">Book Online</div>
+        <h2 class="section-title">Reserve Your<br><em>Appointment</em></h2>
+        <p>Ready to transform your look? Fill out the booking form and we'll send a confirmation directly to your Gmail inbox. We look forward to welcoming you to Narro Beauty.</p>
+        <ul class="contact-items">
+          <li><span>📍</span> Naschmarkt Area, Vienna, Austria</li>
+          <li><span>📞</span> +43 1 234 5678</li>
+          <li><span>✉️</span> hello@narrobeauty.at</li>
+          <li><span>🕐</span> Mon–Sat: 9:00 – 19:00</li>
+        </ul>
+      </div>
+ 
+      <div class="booking-form reveal">
+        <div id="booking-form-inner">
+          <div class="form-title">Book Appointment</div>
+          <div class="form-sub">Confirmation sent to your email · Free consultation included</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="f-fname" placeholder="Anna" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="f-lname" placeholder="Müller" />
+            </div>
+            <div class="form-group">
+              <label>Email (Gmail)</label>
+              <input type="email" id="f-email" placeholder="you@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" id="f-phone" placeholder="+43 ..." />
+            </div>
+            <div class="form-group full">
+              <label>Treatment</label>
+              <select id="f-service">
+                <option value="">Select a service...</option>
+                <option>Microblading — from €180</option>
+                <option>Ombré Brows — from €200</option>
+                <option>Lip Blush — from €220</option>
+                <option>Permanent Eyeliner — from €160</option>
+                <option>Combination Brows — from €240</option>
+                <option>Touch-Up Session — from €80</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label>Preferred Date</label>
+              <input type="date" id="f-date" />
+            </div>
+            <div class="form-group full">
+              <label>Available Times</label>
+              <div class="time-grid" id="time-grid">
+                <div class="time-slot" onclick="selectTime(this)">09:00</div>
+                <div class="time-slot" onclick="selectTime(this)">09:30</div>
+                <div class="time-slot taken">10:00</div>
+                <div class="time-slot" onclick="selectTime(this)">10:30</div>
+                <div class="time-slot" onclick="selectTime(this)">11:00</div>
+                <div class="time-slot taken">11:30</div>
+                <div class="time-slot" onclick="selectTime(this)">12:00</div>
+                <div class="time-slot" onclick="selectTime(this)">13:00</div>
+                <div class="time-slot" onclick="selectTime(this)">13:30</div>
+                <div class="time-slot taken">14:00</div>
+                <div class="time-slot" onclick="selectTime(this)">14:30</div>
+                <div class="time-slot" onclick="selectTime(this)">15:00</div>
+                <div class="time-slot" onclick="selectTime(this)">15:30</div>
+                <div class="time-slot taken">16:00</div>
+                <div class="time-slot" onclick="selectTime(this)">16:30</div>
+                <div class="time-slot" onclick="selectTime(this)">17:00</div>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Message / Notes</label>
+              <textarea id="f-message" placeholder="Any questions, skin concerns, or special requests..."></textarea>
+            </div>
+          </div>
+          <button class="form-submit" onclick="submitBooking()">Send Booking Request via Email</button>
+          <p style="font-size:0.72rem;color:var(--mid);margin-top:1rem;font-weight:300;text-align:center;">
+            Clicking above will open your email app pre-filled with your booking details.
+          </p>
+        </div>
+        <div id="booking-success">
+          <div class="check">✦</div>
+          <h3>Booking Request Sent!</h3>
+          <p>Your email app has opened with your booking details.<br>We'll confirm your appointment within 24 hours.</p>
+          <br>
+          <a href="#home" class="btn-outline" style="display:inline-block;margin-top:1rem;" onclick="resetBooking()">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">NARRO <span>✦</span> BEAUTY</a>
+        <p>Vienna's premier permanent makeup studio. We believe in enhancing your natural beauty with artistry, precision, and lasting results.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="showService('microblading')">Microblading</a></li>
+          <li><a href="javascript:void(0)" onclick="showService('ombre')">Ombré Brows</a></li>
+          <li><a href="javascript:void(0)" onclick="showService('lip')">Lip Blush</a></li>
+          <li><a href="javascript:void(0)" onclick="showService('eyeliner')">Permanent Eyeliner</a></li>
+          <li><a href="javascript:void(0)" onclick="showService('combo')">Combination Brows</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#ar-section">Virtual Try-On</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#">Vienna, Austria</a></li>
+          <li><a href="tel:+4312345678">+43 1 234 5678</a></li>
+          <li><a href="mailto:hello@narrobeauty.at">hello@narrobeauty.at</a></li>
+          <li><a href="#">Mon–Sat 9–19h</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Narro Beauty. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+ 
+</div><!-- /main-site -->
+ 
+<!-- ═══════════════════════════════════════════════ -->
+<!-- SERVICE DETAIL PAGES -->
+ 
+<div id="page-microblading" class="service-page">
+  <div class="sp-hero">
+    <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=80');"></div>
+    <button class="sp-back" onclick="hideService()">← Back to Services</button>
+    <div class="sp-hero-content">
+      <div class="sp-title">Microblading</div>
+      <div class="sp-subtitle">Natural hair-stroke brows that last 12–18 months</div>
+    </div>
+  </div>
+  <div class="sp-body">
+    <div class="sp-info">
+      <h3>What is Microblading?</h3>
+      <p>Microblading is a semi-permanent eyebrow technique that uses a fine, handheld blade to create individual hair-like strokes in the skin. Each stroke is filled with pigment, resulting in incredibly realistic, natural-looking brows.</p>
+      <p>Unlike powder or ombre techniques, microblading mimics the appearance of real hair — making it ideal for those with sparse, thin, or uneven brows who want a natural, effortless look.</p>
+      <h3 style="margin-top:2rem;">The Process</h3>
+      <ul class="sp-steps">
+        <li><div class="sp-step-num">1</div><div class="sp-step-text"><strong>Consultation:</strong> We discuss your brow goals, analyze your face shape, and choose the ideal shape and color for you.</div></li>
+        <li><div class="sp-step-num">2</div><div class="sp-step-text"><strong>Mapping & Design:</strong> We precisely map and draw your new brow shape for your approval before any pigment is applied.</div></li>
+        <li><div class="sp-step-num">3</div><div class="sp-step-text"><strong>Numbing:</strong> A topical numbing cream is applied for 20–30 minutes for maximum comfort.</div></li>
+        <li><div class="sp-step-num">4</div><div class="sp-step-text"><strong>Microblading:</strong> Fine hair strokes are created with our precision blade, depositing pigment into the skin.</div></li>
+        <li><div class="sp-step-num">5</div><div class="sp-step-text"><strong>Aftercare & Touch-Up:</strong> You receive full aftercare instructions. A touch-up at 6–8 weeks is included.</div></li>
+      </ul>
+    </div>
+    <div class="sp-sidebar">
+      <div class="sp-prices">
+        <h4>Pricing</h4>
+        <div class="price-row"><span>Initial Session</span><span class="price-amt">€180</span></div>
+        <div class="price-row"><span>Included Touch-Up (6–8 wks)</span><span class="price-amt">Included</span></div>
+        <div class="price-row"><span>Annual Refresh</span><span class="price-amt">€100</span></div>
+        <div class="price-row"><span>Consultation</span><span class="price-amt">Free</span></div>
+      </div>
+      <button class="sp-book-btn" onclick="goToBooking('Microblading')">Book Microblading →</button>
+    </div>
+  </div>
+</div>
+ 
+<div id="page-ombre" class="service-page">
+  <div class="sp-hero">
+    <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&q=80');"></div>
+    <button class="sp-back" onclick="hideService()">← Back to Services</button>
+    <div class="sp-hero-content">
+      <div class="sp-title">Ombré Brows</div>
+      <div class="sp-subtitle">Soft powder gradient for a polished, made-up look</div>
+    </div>
+  </div>
+  <div class="sp-body">
+    <div class="sp-info">
+      <h3>What are Ombré Brows?</h3>
+      <p>Ombré brows use a digital machine to create a soft, powdery gradient effect — lighter at the front, gradually deeper toward the tail. The result looks like perfectly applied brow powder or pencil, but it's permanent.</p>
+      <p>This technique is highly versatile and works beautifully on all skin types, including oily skin where microblading may not retain as well. It's longer-lasting and requires less touch-up frequency.</p>
+      <ul class="sp-steps">
+        <li><div class="sp-step-num">1</div><div class="sp-step-text"><strong>Consultation & Color Match:</strong> We select the perfect pigment shade to match or complement your natural brows.</div></li>
+        <li><div class="sp-step-num">2</div><div class="sp-step-text"><strong>Shape Design:</strong> Your ideal brow shape is drawn on for approval, using golden-ratio mapping techniques.</div></li>
+        <li><div class="sp-step-num">3</div><div class="sp-step-text"><strong>Machine Application:</strong> Tiny dots of pigment are implanted using an electric device, building the gradient effect.</div></li>
+        <li><div class="sp-step-num">4</div><div class="sp-step-text"><strong>Healing & Touch-Up:</strong> Brows heal beautifully in 2–3 weeks. Touch-up session included at 6–8 weeks.</div></li>
+      </ul>
+    </div>
+    <div class="sp-sidebar">
+      <div class="sp-prices">
+        <h4>Pricing</h4>
+        <div class="price-row"><span>Initial Session</span><span class="price-amt">€200</span></div>
+        <div class="price-row"><span>Touch-Up Included</span><span class="price-amt">Included</span></div>
+        <div class="price-row"><span>Annual Refresh</span><span class="price-amt">€110</span></div>
+        <div class="price-row"><span>Consultation</span><span class="price-amt">Free</span></div>
+      </div>
+      <button class="sp-book-btn" onclick="goToBooking('Ombré Brows')">Book Ombré Brows →</button>
+    </div>
+  </div>
+</div>
+ 
+<div id="page-lip" class="service-page">
+  <div class="sp-hero">
+    <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80');"></div>
+    <button class="sp-back" onclick="hideService()">← Back to Services</button>
+    <div class="sp-hero-content">
+      <div class="sp-title">Lip Blush</div>
+      <div class="sp-subtitle">Fuller, defined lips with a natural flush of color</div>
+    </div>
+  </div>
+  <div class="sp-body">
+    <div class="sp-info">
+      <h3>What is Lip Blush?</h3>
+      <p>Lip blush is a permanent makeup technique that deposits subtle, natural pigment into the lips to add color, definition, and the appearance of fullness. The result is a soft, "blush" finish — like your lips but better.</p>
+      <p>It can correct uneven lip lines, enhance lip shape, add symmetry, and create the illusion of a fuller pout. Color choices range from nude-pink to deeper berry tones to match your style.</p>
+      <ul class="sp-steps">
+        <li><div class="sp-step-num">1</div><div class="sp-step-text"><strong>Color Consultation:</strong> We select a pigment that complements your skin tone and desired outcome.</div></li>
+        <li><div class="sp-step-num">2</div><div class="sp-step-text"><strong>Lip Mapping:</strong> We define and balance your lip shape, adding symmetry and dimension where needed.</div></li>
+        <li><div class="sp-step-num">3</div><div class="sp-step-text"><strong>Numbing:</strong> Thorough numbing for a comfortable experience throughout the session.</div></li>
+        <li><div class="sp-step-num">4</div><div class="sp-step-text"><strong>Pigment Application:</strong> Color is tattooed into the lips with soft, blended technique for a natural gradient.</div></li>
+      </ul>
+    </div>
+    <div class="sp-sidebar">
+      <div class="sp-prices">
+        <h4>Pricing</h4>
+        <div class="price-row"><span>Lip Blush Session</span><span class="price-amt">€220</span></div>
+        <div class="price-row"><span>Touch-Up (6–8 wks)</span><span class="price-amt">Included</span></div>
+        <div class="price-row"><span>Color Boost</span><span class="price-amt">€120</span></div>
+        <div class="price-row"><span>Consultation</span><span class="price-amt">Free</span></div>
+      </div>
+      <button class="sp-book-btn" onclick="goToBooking('Lip Blush')">Book Lip Blush →</button>
+    </div>
+  </div>
+</div>
+ 
+<div id="page-eyeliner" class="service-page">
+  <div class="sp-hero">
+    <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=1200&q=80');"></div>
+    <button class="sp-back" onclick="hideService()">← Back to Services</button>
+    <div class="sp-hero-content">
+      <div class="sp-title">Permanent Eyeliner</div>
+      <div class="sp-subtitle">Perfectly defined eyes, every single day</div>
+    </div>
+  </div>
+  <div class="sp-body">
+    <div class="sp-info">
+      <h3>What is Permanent Eyeliner?</h3>
+      <p>Permanent eyeliner is a cosmetic tattoo applied along the lash line to create the appearance of fuller lashes, more defined eyes, and a perfectly consistent liner without daily application.</p>
+      <p>Options range from a subtle lash-line enhancement (natural look) to a classic fine liner or a bolder, more dramatic line. Upper lash line, lower lash line, or both — customized entirely to you.</p>
+      <ul class="sp-steps">
+        <li><div class="sp-step-num">1</div><div class="sp-step-text"><strong>Style Selection:</strong> Choose between lash-line enhancement, thin liner, medium liner, or bold liner.</div></li>
+        <li><div class="sp-step-num">2</div><div class="sp-step-text"><strong>Preparation:</strong> Eye area is cleansed and a topical numbing agent is applied for comfort.</div></li>
+        <li><div class="sp-step-num">3</div><div class="sp-step-text"><strong>Application:</strong> Pigment is carefully deposited along the lash line with precision and care.</div></li>
+        <li><div class="sp-step-num">4</div><div class="sp-step-text"><strong>Healing:</strong> Minor swelling for 24–48h. Final results visible after 4 weeks.</div></li>
+      </ul>
+    </div>
+    <div class="sp-sidebar">
+      <div class="sp-prices">
+        <h4>Pricing</h4>
+        <div class="price-row"><span>Upper Lash Line</span><span class="price-amt">€160</span></div>
+        <div class="price-row"><span>Upper + Lower</span><span class="price-amt">€220</span></div>
+        <div class="price-row"><span>Touch-Up Included</span><span class="price-amt">Included</span></div>
+        <div class="price-row"><span>Annual Refresh</span><span class="price-amt">€90</span></div>
+      </div>
+      <button class="sp-book-btn" onclick="goToBooking('Permanent Eyeliner')">Book Eyeliner →</button>
+    </div>
+  </div>
+</div>
+ 
+<div id="page-combo" class="service-page">
+  <div class="sp-hero">
+    <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80');"></div>
+    <button class="sp-back" onclick="hideService()">← Back to Services</button>
+    <div class="sp-hero-content">
+      <div class="sp-title">Combination Brows</div>
+      <div class="sp-subtitle">Microblading strokes + powder shading = perfection</div>
+    </div>
+  </div>
+  <div class="sp-body">
+    <div class="sp-info">
+      <h3>What are Combination Brows?</h3>
+      <p>Combination brows bring together the natural realism of microblading with the depth and longevity of powder shading. Hair strokes define the front of the brow, while gradient shading adds richness and structure through the body and tail.</p>
+      <p>The result is a dimensional, textured brow that looks both natural and polished — ideal for people who want more defined brows but still want them to look realistic.</p>
+      <ul class="sp-steps">
+        <li><div class="sp-step-num">1</div><div class="sp-step-text"><strong>Design Phase:</strong> Full brow mapping and style design consultation before any work begins.</div></li>
+        <li><div class="sp-step-num">2</div><div class="sp-step-text"><strong>Microblading Phase:</strong> Hair strokes applied to the brow front for a natural look.</div></li>
+        <li><div class="sp-step-num">3</div><div class="sp-step-text"><strong>Shading Phase:</strong> Powder gradient added to the body and tail using a digital machine.</div></li>
+        <li><div class="sp-step-num">4</div><div class="sp-step-text"><strong>Review & Aftercare:</strong> Final result reviewed, aftercare kit and instructions provided.</div></li>
+      </ul>
+    </div>
+    <div class="sp-sidebar">
+      <div class="sp-prices">
+        <h4>Pricing</h4>
+        <div class="price-row"><span>Combination Brows</span><span class="price-amt">€240</span></div>
+        <div class="price-row"><span>Touch-Up Included</span><span class="price-amt">Included</span></div>
+        <div class="price-row"><span>Annual Refresh</span><span class="price-amt">€130</span></div>
+        <div class="price-row"><span>Consultation</span><span class="price-amt">Free</span></div>
+      </div>
+      <button class="sp-book-btn" onclick="goToBooking('Combination Brows')">Book Combination Brows →</button>
+    </div>
+  </div>
+</div>
+ 
+<div id="page-touchup" class="service-page">
+  <div class="sp-hero">
+    <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&q=80');"></div>
+    <button class="sp-back" onclick="hideService()">← Back to Services</button>
+    <div class="sp-hero-content">
+      <div class="sp-title">Touch-Up Sessions</div>
+      <div class="sp-subtitle">Keep your permanent makeup looking fresh and vibrant</div>
+    </div>
+  </div>
+  <div class="sp-body">
+    <div class="sp-info">
+      <h3>Why Touch-Ups Matter</h3>
+      <p>Permanent makeup fades over time due to sun exposure, skin type, and natural skin cell renewal. Touch-up sessions restore color intensity, refine the shape, and ensure your results continue to look their best.</p>
+      <p>We recommend your first touch-up at 6–8 weeks after the initial session (included in your package), followed by annual refreshes to maintain optimal color and definition.</p>
+      <ul class="sp-steps">
+        <li><div class="sp-step-num">1</div><div class="sp-step-text"><strong>Assessment:</strong> We review how your permanent makeup has healed and what areas need attention.</div></li>
+        <li><div class="sp-step-num">2</div><div class="sp-step-text"><strong>Color Matching:</strong> Pigment is matched to your existing work and adjusted if desired.</div></li>
+        <li><div class="sp-step-num">3</div><div class="sp-step-text"><strong>Refresh Application:</strong> Faded areas are filled, shape is refined, and overall results are perfected.</div></li>
+      </ul>
+    </div>
+    <div class="sp-sidebar">
+      <div class="sp-prices">
+        <h4>Pricing</h4>
+        <div class="price-row"><span>6–8 Week Touch-Up</span><span class="price-amt">Included*</span></div>
+        <div class="price-row"><span>Annual Brow Refresh</span><span class="price-amt">from €80</span></div>
+        <div class="price-row"><span>Annual Lip Refresh</span><span class="price-amt">from €100</span></div>
+        <div class="price-row"><span>Annual Liner Refresh</span><span class="price-amt">from €80</span></div>
+      </div>
+      <button class="sp-book-btn" onclick="goToBooking('Touch-Up Session')">Book Touch-Up →</button>
+    </div>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
